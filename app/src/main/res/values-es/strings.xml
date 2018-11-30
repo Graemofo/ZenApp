@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ZenApp</string>
+    <string name="soundsButton">Sonidos</string>
+    <string name="guidedButton">Guiado</string>
+    <string name="breathingButton">Respiración</string>
+    <string name="forestText">Bosque</string>
+    <string name="nightText">Noche</string>
+    <string name="campfireText">Hoguera</string>
+    <string name="snow_mountainText">Montaña de nieve</string>
+    <string name="rainText">Lluvia</string>
+    <string name="city_at_nightText">Ciudad de noche</string>
+    <string name="beachText">Playa</string>
+    <string name="anxietyText">Ansiedad</string>
+    <string name="stressText">Estrés</string>
+    <string name="sleepText">Dormir</string>
+    <string name="depressionText">Depresión</string>
+    <string name="confidenceText">Confianza</string>
+    <string name="mainactivitybuttons">MainActivityButtons</string>
+    <string name="splash_logo">splashlogo</string>
+</resources>

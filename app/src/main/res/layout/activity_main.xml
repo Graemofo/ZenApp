@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <Button
+
+            android:id="@+id/soundsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/soundsButton"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/guidedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="@string/guidedButton"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/breathingButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="@string/breathingButton"
+            android:textColor="@android:color/background_light" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <ImageButton
+            android:contentDescription="@string/mainactivitybuttons"
+            android:id="@+id/forestButton"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:srcCompat="@drawable/forest_river"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forestText"
+            android:clickable="false"
+            android:textSize="32sp"
+            android:textColor="@android:color/white"
+            android:padding="5dp"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <ImageButton
+            android:contentDescription="@string/mainactivitybuttons"
+            android:id="@+id/nightButton"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:srcCompat="@drawable/night_sounds" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nightText"
+            android:clickable="false"
+            android:textSize="32sp"
+            android:textColor="@android:color/white"
+            android:padding="5dp"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <ImageButton
+            android:contentDescription="@string/mainactivitybuttons"
+            android:id="@+id/fireButton"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:srcCompat="@drawable/fire" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/campfireText"
+            android:clickable="false"
+            android:textSize="32sp"
+            android:textColor="@android:color/white"
+            android:padding="5dp"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <ImageButton
+            android:contentDescription="@string/mainactivitybuttons"
+            android:id="@+id/winterButton"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:srcCompat="@drawable/winter" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/snow_mountainText"
+            android:clickable="false"
+            android:textSize="32sp"
+            android:textColor="@android:color/white"
+            android:padding="5dp"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <ImageButton
+            android:contentDescription="@string/mainactivitybuttons"
+            android:id="@+id/rainButton"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/rain" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rainText"
+            android:clickable="false"
+            android:textSize="32sp"
+            android:textColor="@android:color/white"
+            android:padding="5dp"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <ImageButton
+            android:contentDescription="@string/mainactivitybuttons"
+            android:id="@+id/cityButton"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/city_sounds" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/city_at_nightText"
+            android:clickable="false"
+            android:textSize="32sp"
+            android:textColor="@android:color/white"
+            android:padding="5dp"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <ImageButton
+            android:contentDescription="@string/mainactivitybuttons"
+            android:id="@+id/beachButton"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+
+            app:srcCompat="@drawable/beach" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/beachText"
+            android:clickable="false"
+            android:textSize="32sp"
+            android:textColor="@android:color/white"
+            android:padding="5dp"
+            />
+    </FrameLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+</ScrollView>
