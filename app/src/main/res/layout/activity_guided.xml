@@ -49,37 +49,37 @@
 
         <Button
             android:layout_width="0dp"
-            android:alpha="0.75"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
             android:background="@drawable/mybutton"
             android:backgroundTint="@android:color/holo_purple"
             android:text="@string/anxietyText"
+            android:onClick="guided_anxiety"
             android:textColor="@android:color/white"
             android:textSize="20dp" />
 
         <Button
             android:layout_width="0dp"
-            android:alpha="0.75"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
             android:background="@drawable/mybutton"
             android:backgroundTint="@android:color/holo_orange_dark"
             android:text="@string/stressText"
+            android:onClick="guided_stress"
             android:textColor="@android:color/white"
             android:textSize="20dp" />
 
         <Button
             android:layout_width="0dp"
-            android:alpha="0.75"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
             android:background="@drawable/mybutton"
             android:backgroundTint="@android:color/holo_blue_light"
             android:text="@string/sleepText"
+            android:onClick="guided_sleep"
             android:textColor="@android:color/white"
             android:textSize="20dp" />
 
@@ -87,25 +87,25 @@
 
     <Button
         android:layout_width="match_parent"
-        android:alpha="0.75"
         android:layout_height="0dp"
         android:layout_margin="3dp"
         android:layout_weight="1"
         android:background="@drawable/mybutton"
-        android:backgroundTint="?android:attr/colorControlActivated"
+        android:backgroundTint="@android:color/holo_blue_bright"
         android:text="@string/depressionText"
+        android:onClick="guided_depression"
         android:textColor="@android:color/white"
         android:textSize="30dp" />
 
     <Button
         android:layout_width="match_parent"
-        android:alpha="0.75"
         android:layout_height="0dp"
         android:layout_margin="3dp"
         android:layout_weight="1"
         android:background="@drawable/mybutton"
-        android:backgroundTint="@color/colorPrimaryDark"
+        android:backgroundTint="@android:color/holo_orange_light"
         android:text="@string/confidenceText"
+        android:onClick="guided_confidence"
         android:textColor="@android:color/white"
         android:textSize="30dp" />
 

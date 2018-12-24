@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "968993644524",
+    "firebase_url": "https://zenapp-8b655.firebaseio.com",
+    "project_id": "zenapp-8b655",
+    "storage_bucket": "zenapp-8b655.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968993644524:android:fa34dd22db1d3d50",
+        "android_client_info": {
+          "package_name": "com.nci.graeme.zenapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "968993644524-t9odu0rldc5m6l214ssvjp4im27fd1rc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nci.graeme.zenapp",
+            "certificate_hash": "a68000128659e48f22de13e0c155a442a0087674"
+          }
+        },
+        {
+          "client_id": "968993644524-mpv93ifrecb64nbvicugc6ckvqus6l0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgBl3PRughcrCRe-cyLamFWxk7-ukedSE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "968993644524-mpv93ifrecb64nbvicugc6ckvqus6l0f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,115 +2,159 @@ package com.nci.graeme.zenapp;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
+import java.io.IOException;
+
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton r1, r2, r3, r4, r5, r6, r7;
-    MediaPlayer mp, mp2, mp3, mp4, mp5, mp6, mp7;
+
+    private StorageReference mStorageRef;
+    private static MediaPlayer med1, med2, med3, med4, med5, med6, med7;
+
+    public void play_forest(View v){
+        if(med1 == null){
+            med1 = new MediaPlayer();
+            try {
+                med1.setDataSource("https://firebasestorage.googleapis.com/v0/b/zenapp-8b655.appspot.com/o/forest_river_mp3.mp3?alt=media&token=aeb06dcc-fa5e-453f-a8ad-7d0452778c94");
+                med1.prepare();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+        if(med1.isPlaying()){
+            med1.pause();
+        }
+        else{
+            med1.start();
+        }
+    }
+
+    public void play_night(View v){
+        if(med2 == null){
+            med2 = new MediaPlayer();
+            try {
+                med2.setDataSource("https://firebasestorage.googleapis.com/v0/b/zenapp-8b655.appspot.com/o/night_sounds_mp3.mp3?alt=media&token=24fe2a43-59da-49c9-8cae-eb326ea4bbb9");
+                med2.prepare();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+        if(med2.isPlaying()){
+            med2.pause();
+        }
+        else{
+            med2.start();
+        }
+    }
+
+    public void play_campfire(View v){
+        if(med3 == null){
+            med3 = new MediaPlayer();
+            try {
+                med3.setDataSource("https://firebasestorage.googleapis.com/v0/b/zenapp-8b655.appspot.com/o/cut_campfire.mp3?alt=media&token=52f99b5d-eb16-4e73-b796-ebe54505e7ed");
+                med3.prepare();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+        if(med3.isPlaying()){
+            med3.pause();
+        }
+        else{
+            med3.start();
+        }
+    }
+
+    public void play_winter(View v){
+        if(med4 == null){
+            med4 = new MediaPlayer();
+            try {
+                med4.setDataSource("https://firebasestorage.googleapis.com/v0/b/zenapp-8b655.appspot.com/o/snow_sounds.mp3?alt=media&token=805048f3-753f-4753-9a01-df254e9b2477");
+                med4.prepare();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+        if(med4.isPlaying()){
+            med4.pause();
+        }
+        else{
+            med4.start();
+        }
+    }
+
+    public void play_rain(View v){
+        if(med5 == null){
+            med5 = new MediaPlayer();
+            try {
+                med5.setDataSource("https://firebasestorage.googleapis.com/v0/b/zenapp-8b655.appspot.com/o/rain_sounds.mp3?alt=media&token=ac72fd1f-8265-4db3-a981-da22f19301ed");
+                med5.prepare();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+        if(med5.isPlaying()){
+            med5.pause();
+        }
+        else{
+            med5.start();
+        }
+    }
+
+    public void play_city(View v){
+        if(med6 == null){
+            med6 = new MediaPlayer();
+            try {
+                med6.setDataSource("https://firebasestorage.googleapis.com/v0/b/zenapp-8b655.appspot.com/o/city_sounds.mp3?alt=media&token=99d14cee-85b3-4e22-916f-32a57c39f710");
+                med6.prepare();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+        if(med6.isPlaying()){
+            med6.pause();
+        }
+        else{
+            med6.start();
+        }
+    }
+
+    public void play_beach(View v){
+        if(med7 == null){
+            med7 = new MediaPlayer();
+            try {
+                med7.setDataSource("https://firebasestorage.googleapis.com/v0/b/zenapp-8b655.appspot.com/o/beach_sounds_mp3.mp3?alt=media&token=4304f06e-23f3-4cc6-ae42-6c10a9ca08bc");
+                med7.prepare();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+        if(med7.isPlaying()){
+            med7.pause();
+        }
+        else{
+            med7.start();
+        }
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        mStorageRef = FirebaseStorage.getInstance().getReference();
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-       r1 = findViewById(R.id.forestButton);
-       r2 = findViewById(R.id.nightButton);
-       r3 = findViewById(R.id.fireButton);
-       r4 = findViewById(R.id.winterButton);
-       r5 = findViewById(R.id.rainButton);
-       r6 = findViewById(R.id.cityButton);
-       r7 = findViewById(R.id.beachButton);
-
-       mp = MediaPlayer.create(getApplicationContext(),R.raw.forest_river);
-       mp2 = MediaPlayer.create(getApplicationContext(),R.raw.night_sounds_two);
-       mp3 = MediaPlayer.create(getApplicationContext(),R.raw.campfire_cut);
-       mp4 = MediaPlayer.create(getApplicationContext(),R.raw.snow_sounds);
-       mp5 = MediaPlayer.create(getApplicationContext(),R.raw.rain_sounds);
-       mp6 = MediaPlayer.create(getApplicationContext(),R.raw.city_sounds);
-       mp7 = MediaPlayer.create(getApplicationContext(),R.raw.beach_sounds);
-
-        r1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(mp.isPlaying()){
-                    mp.pause();
-                }else{
-
-                    mp.start();
-                }
-            }
-        });
-        r2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(mp2.isPlaying()){
-                    mp2.pause();
-                }else{
-                    mp2.start();
-                }
-            }
-        });
-        r3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(mp3.isPlaying()){
-                    mp3.pause();
-                }else{
-
-                    mp3.start();
-                }
-            }
-        });
-        r4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(mp4.isPlaying()){
-                    mp4.pause();
-                }else{
-
-                    mp4.start();
-                }
-            }
-        });
-        r5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(mp5.isPlaying()){
-                    mp5.pause();
-                }else{
-
-                    mp5.start();
-                }
-            }
-        });
-        r6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(mp6.isPlaying()){
-                    mp6.pause();
-                }else{
-
-                    mp6.start();
-                }
-            }
-        });
-        r7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(mp7.isPlaying()){
-                    mp7.pause();
-                }else{
-
-                    mp7.start();
-                }
-            }
-        });
-
 
 
         buttontoguided();
